@@ -1,9 +1,6 @@
 # Dynamic Loading
 Code created during recording the [Dynamic Loading](https://youtu.be/PhMZYrzJBC8) video.
 
-# Code for the Self-Modifying Code video
-Code created during recording the [Self-Modifying Code in Assembly](https://youtu.be/VO6gMLtQOKM) video.
-
 # Build
 ## C
 ```
