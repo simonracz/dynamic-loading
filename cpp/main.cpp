@@ -23,7 +23,7 @@ void checkDlError(void* handle) {
 }
 
 int main(int argc, char* argv[]) {
-	ICamera* (*createCamera)(void);
+    ICamera* (*createCamera)(void);
     void (*destroyCamera)(ICamera*);
 
     if (argc != 2) {
@@ -45,10 +45,10 @@ int main(int argc, char* argv[]) {
     }
     checkDlError(handle);
 
-	createCamera = (ICamera* (*)(void)) dlsym(handle, "createCamera");
+    createCamera = (ICamera* (*)(void)) dlsym(handle, "createCamera");
     checkDlError(handle);
     destroyCamera = (void (*)(ICamera*)) dlsym(handle, "destroyCamera");
-	checkDlError(handle);
+    checkDlError(handle);
 
     ICamera* cam = createCamera();
     cam->init();
@@ -58,5 +58,5 @@ int main(int argc, char* argv[]) {
 
     dlclose(handle);
 
-	exit(EXIT_SUCCESS);
+    exit(EXIT_SUCCESS);
 }
